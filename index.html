@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cape at Coral Bay HOA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>The Cape at Coral Bay</h1>
+      <p>Homeowners Association</p>
+      <a class="cta" href="#documents">View Community Documents</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section about" id="about">
+      <div class="content">
+        <h2>Welcome Home</h2>
+        <p>
+          The Cape at Coral Bay is a vibrant, close-knit neighborhood in Margate, Florida.
+          Our homeowners association works to provide residents with a safe, well-maintained,
+          and welcoming community. This site provides quick access to important documents and
+          contact information for our property management team.
+        </p>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="content">
+        <h2>Property Management</h2>
+        <div class="card">
+          <h3>Jason Hoffman, CAM</h3>
+          <p class="subtitle">Precision Property Management</p>
+          <ul class="contact-list">
+            <li>
+              <span aria-hidden="true">📞</span>
+              <a href="tel:+17543421882">(754) 342-1882</a>
+            </li>
+            <li>
+              <span aria-hidden="true">✉️</span>
+              <a href="mailto:jason@ppmfla.com">jason@ppmfla.com</a>
+            </li>
+            <li>
+              <span aria-hidden="true">🌐</span>
+              <a href="https://www.ppmfla.com" target="_blank" rel="noopener">www.ppmfla.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section documents" id="documents">
+      <div class="content">
+        <h2>Community Documents</h2>
+        <p>Download the latest governing documents and resources for residents.</p>
+        <div class="document-grid">
+          <a class="document-card" href="Articles%20of%20Inc%208-2-19.pdf" download>
+            <span class="doc-icon" aria-hidden="true">📄</span>
+            <span class="doc-title">Articles of Incorporation (Aug 2, 2019)</span>
+          </a>
+          <a class="document-card" href="The%20Cape%20at%20Coral%20Bay%20-%20Docs.pdf" download>
+            <span class="doc-icon" aria-hidden="true">📄</span>
+            <span class="doc-title">The Cape at Coral Bay - Reference Docs</span>
+          </a>
+          <a class="document-card" href="Updated%20Rules%20and%20Regulations%20-%20version%20Feb%206,%202023%20v2.pdf" download>
+            <span class="doc-icon" aria-hidden="true">📄</span>
+            <span class="doc-title">Rules &amp; Regulations (Feb 6, 2023)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> The Cape at Coral Bay HOA. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

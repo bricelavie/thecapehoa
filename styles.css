@@ -1,0 +1,203 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, rgba(18, 76, 135, 0.9), rgba(44, 150, 167, 0.85));
+  --primary-color: #134c87;
+  --accent-color: #2c96a7;
+  --text-color: #1d1d1f;
+  --muted-text: #5b5b63;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --page-bg: #f4f7fb;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  background: var(--page-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero {
+  position: relative;
+  min-height: 65vh;
+  background: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-gradient);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.9rem 2.4rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.section {
+  padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+}
+
+.section:nth-of-type(even) {
+  background: #fff;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+h2 {
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+p {
+  margin-top: 0;
+  color: var(--muted-text);
+}
+
+.contact .card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 25px 50px rgba(19, 76, 135, 0.18);
+  backdrop-filter: blur(6px);
+  max-width: 480px;
+}
+
+.contact h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.subtitle {
+  margin: 0 0 1.5rem;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.contact-list a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-list a:hover {
+  color: var(--accent-color);
+}
+
+.document-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.document-card {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  box-shadow: 0 20px 40px rgba(19, 76, 135, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.document-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 55px rgba(19, 76, 135, 0.18);
+}
+
+.doc-icon {
+  font-size: 2rem;
+}
+
+.doc-title {
+  font-weight: 600;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 1.5rem 3rem;
+  font-size: 0.9rem;
+  color: var(--muted-text);
+}
+
+@media (max-width: 600px) {
+  .contact .card {
+    padding: 1.75rem;
+  }
+
+  .document-card {
+    grid-template-columns: 36px 1fr;
+    padding: 1.25rem;
+  }
+}
